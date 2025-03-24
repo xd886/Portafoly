@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0 3%;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background: linear-gradient(180deg, #222831 0%, #31363F 100%);
+  color: #EEEEEE;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+h1, h2 {
+  font-weight: 700;
+  font-size: 42px;
+}
+
+img {
+  object-fit: contain;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #76ABAE;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.main-list {
+  display: flex;
+  gap: 120px;
+}
+
+.list-item__link {
+  position: relative;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #EEEEEE;
+}
+
+.list-item__link::after {
+  position: absolute;
+  transition: width 0.3s ease-in-out;
+  content: "";
+  border-radius: 10px;
+  width: 50%;
+  height: 3px;
+  bottom: -8px;
+  background: #76ABAE;
+}
+
+.list-item__link:hover::after {
+  width: 100%;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/developer.png);
+  background-size: cover;
+  padding: 12vh 10vw 70vh 10vw;
+  background-position: center bottom;
+  gap: 20px;
+}
+
+.home__title {
+  font-size: 65px;
+  text-align: center;
+  color: #76ABAE;
+  line-height: 1.2;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home__subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
+
+.about {
+  margin-bottom: 150px;
+}
+
+.about__title {
+  font-size: 55px;
+  text-align: left;
+  color: #76ABAE;
+  line-height: 1.2;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-bottom: 50px;
+}
+
+.about__title::after {
+  content: "";
+  border-radius: 10px;
+  width: 50%;
+  height: 2px;
+  background: #EEEEEE;
+}
+
+.info-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-block__text {
+  width: 45%;
+}
+
+.info-block__img {
+  align-self: center;
+}

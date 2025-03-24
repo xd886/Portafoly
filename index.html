@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <nav>
+            <ul class="main-list">
+                <li class="list-item">
+                    <a href="#" class="list-item__link">Inicio</a>
+                </li>
+                <li class="list-item">
+                    <a href="#about" class="list-item__link">Sobre mí</a>
+                </li>
+                <li class="list-item">
+                    <a href="#projects" class="list-item__link">Proyectos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home">
+        <h1 class="home__title">Mi Portafolio</h1>
+        <p class="home__subtitle">Explora mis proyectos y habilidades.</p>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="about__title">Sobre Mí</h2>
+        <p class="info-block__text">
+            Soy un apasionado por la programación y el desarrollo web.
+        </p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="skills__title">Proyectos</h2>
+
+        <form method="POST">
+            <label for="skill">Elige una habilidad:</label>
+            <select name="skill" id="skill">
+                <option value="python">Python</option>
+                <option value="discord">Discord Bot</option>
+                <option value="html">HTML & CSS</option>
+                <option value="db">Bases de Datos</option>
+            </select>
+            <button type="submit">Mostrar Proyecto</button>
+        </form>
+
+        {% if project_image %}
+            <div class="project">
+                <h3>Proyecto Relacionado</h3>
+                <img src="{{ project_image }}" alt="Proyecto seleccionado" class="project__img">
+            </div>
+        {% endif %}
+    </section>
+
+</body>
+</html>
